@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Linear_Equation_Solver_(EDU).iml" filepath="$PROJECT_DIR$/.idea/Linear_Equation_Solver_(EDU).iml" group="Linear_Equation_Solver_(EDU)" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Linear Equations Solver (Java)/task/Linear_Equations_Solver_(Java)-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Linear Equations Solver (Java)/task/Linear_Equations_Solver_(Java)-task.iml" group="Linear_Equation_Solver_(EDU)/Linear_Equations_Solver_(Java)-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Linear Equations Solver (Java)/task/Linear_Equations_Solver_(Java)-task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Linear Equations Solver (Java)/task/Linear_Equations_Solver_(Java)-task_main.iml" group="Linear_Equation_Solver_(EDU)/Linear_Equations_Solver_(Java)-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Linear Equations Solver (Java)/task/Linear_Equations_Solver_(Java)-task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Linear Equations Solver (Java)/task/Linear_Equations_Solver_(Java)-task_test.iml" group="Linear_Equation_Solver_(EDU)/Linear_Equations_Solver_(Java)-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util.iml" group="Linear_Equation_Solver_(EDU)/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_main.iml" group="Linear_Equation_Solver_(EDU)/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" group="Linear_Equation_Solver_(EDU)/util" />
+    </modules>
+  </component>
+</project>
