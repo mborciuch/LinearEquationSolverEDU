@@ -16,6 +16,7 @@ public class Row {
 
     public Row(Row row) {
         this.name = row.getName();
+        this.size = row.getSize();
         this.values = row.getValues();
     }
 
@@ -43,5 +44,13 @@ public class Row {
 
     public void setValue(int index, double value) {
         values[index] = value;
+    }
+
+    public double getLastValue() {
+        return values[size-1];
+    }
+
+    public int getSize() {
+        return size;
     }
 }

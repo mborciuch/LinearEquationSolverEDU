@@ -21,25 +21,24 @@ public class Main {
 
         List<Row> rowsArray = new ArrayList<>();
 
-        int n = Integer.parseInt(rows.get(0));
+        String[] parameters = rows.get(0).split(" ");
+        int variables = Integer.parseInt(parameters[0]);
+        int equations = Integer.parseInt(parameters[1]);
         rows.remove(0);
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < equations; i++) {
             String[] stringArray = rows.get(i).split(" ");
-            Row row = new Row(i, n, stringArray);
+            Row row = new Row(i, variables + 1, stringArray);
             rowsArray.add(row);
         }
 
-        Matrix matrix = new Matrix(rowsArray, n);
+        Matrix matrix = new Matrix(rowsArray, variables, equations);
         LinearEquationSolver linearEquationSolver = new LinearEquationSolver(matrix);
         System.out.println("Row Manipulations:");
-        linearEquationSolver.manipulateRow();
-
+        String solution = linearEquationSolver.findSolution();
         try (PrintWriter printWriter = new PrintWriter(new File(outFile))) {
             {
-                for(Row row :matrix.getRows()){
-                    printWriter.println(row.getValue(matrix.getEquations()));
-                }
+                printWriter.print(solution);
             }
 
         } catch (IOException e) {

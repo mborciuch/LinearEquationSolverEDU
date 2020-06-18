@@ -19,4 +19,8 @@ public class SwapColumnsCommand implements Command {
         matrix.swapColumns(firstColumnIndex, secondColumnIndex);
     }
 
+    @Override
+    public void undo() {
+        matrix.swapColumns(secondColumnIndex, firstColumnIndex);
+    }
 }

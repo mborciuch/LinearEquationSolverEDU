@@ -6,19 +6,21 @@ import java.util.List;
 
 public class Matrix {
     private List<Row> rows;
-    private int equations;
     private int variables;
+    private int equations;
 
-    public Matrix(List<Row> rows, int equations) {
+    public Matrix(List<Row> rows, int variables, int equations) {
         this.rows = rows;
+        this.variables = variables;
         this.equations = equations;
     }
+
 
     public String setElementToOne(int index) {
         Row rowToTransform = rows.get(index);
         double valueToTransform = rowToTransform.getValue(index);
         if (valueToTransform == 1) {
-            return null;
+            return "";
         }
         if (valueToTransform == 0) {
             return "Zero value";
@@ -33,10 +35,13 @@ public class Matrix {
         Row lowerRow = rows.get(lowerRowIndex);
 
         double modifier = getModifierForTransformingOtherRow(lowerRow.getValue(upperRowIndex));
+        if (modifier == 0.0 || modifier == -0.0) {
+            return "Zero modifier";
+        }
         Row tempRow = new Row(upperRow);
         tempRow.multiplyRow(modifier);
 
-        lowerRow.addRowToRow(tempRow, equations);
+        lowerRow.addRowToRow(tempRow, variables);
         return String.format("%f * %s + %s -> %s", modifier, upperRow.getName(), lowerRow.getName(), lowerRow.getName());
     }
 
@@ -46,7 +51,7 @@ public class Matrix {
         Row tempRow = new Row(upperRow);
 
         rows.set(upperRowIndex, lowerRow);
-        rows.set(upperRowIndex, tempRow);
+        rows.set(lowerRowIndex, tempRow);
 
         return String.format("%s <-> %s", upperRow.getName(), lowerRow.getName());
     }
@@ -112,5 +117,22 @@ public class Matrix {
 
     public int getEquations() {
         return equations;
+    }
+
+    public int getVariables() {
+        return variables;
+    }
+
+    public int getNumberOfEmptyRows() {
+        int emptyRows = rows.size();
+        for (Row row : rows) {
+            for (double value : row.getValues()) {
+                if (value != 0.0 && value != -0.0) {
+                    emptyRows--;
+                    break;
+                }
+            }
+        }
+        return emptyRows;
     }
 }

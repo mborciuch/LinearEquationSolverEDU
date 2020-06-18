@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$/../../../../Linear Equations Solver (Java)/task">
       <excludeFolder url="file://$MODULE_DIR$/../../../../Linear Equations Solver (Java)/task/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../../Linear Equations Solver (Java)/task/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../Linear Equations Solver (Java)/task/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

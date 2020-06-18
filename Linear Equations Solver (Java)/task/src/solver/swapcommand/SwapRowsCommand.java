@@ -18,4 +18,9 @@ public class SwapRowsCommand implements Command {
     public void execute() {
         matrix.swapRows(firstRowIndex, secondRowIndex);
     }
+
+    @Override
+    public void undo() {
+        return;
+    }
 }
